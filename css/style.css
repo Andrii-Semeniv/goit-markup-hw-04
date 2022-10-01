@@ -12,6 +12,7 @@
   --btn-second-color: #188ce8;
   --border-color-first: #ececec;
   --border-color-second: #eeeeee;
+  --background-color-hero: #c4c4c4;
 }
 
 body {
@@ -137,13 +138,35 @@ img {
   color: var(--link-color);
 }
 
+.logo-mail,
+.logo-tel {
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+  margin-right: 10px;
+}
 /* ----------- Hero=============*/
 .hero {
-  background-color: var(--background-color-second);
+  background-color: var(--background-color-hero);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 600px;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
 .hero-title {
   margin: 0 auto;
   margin-bottom: 30px;
@@ -206,7 +229,38 @@ img {
   max-width: 270px;
   display: block;
 }
-
+.adventage-item::before {
+  content: "";
+  height: 120px;
+  background-color: var(--background-color-third);
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 30px;
+}
+.adventage-item.details::before {
+  background-image: url(../images/svg/antenna.svg);
+  background-size: 70px 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.adventage-item.punc::before {
+  background-image: url(../images/svg/clock.svg);
+  background-size: 70px 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.adventage-item.plan::before {
+  background-image: url(../images/svg/diagram.svg);
+  background-size: 70px 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.adventage-item.tech::before {
+  background-image: url(../images/svg/astronaut.svg);
+  background-size: 70px 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .adventage-title {
   margin-bottom: 10px;
 
